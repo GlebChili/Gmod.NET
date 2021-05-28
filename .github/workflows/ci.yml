@@ -429,4 +429,4 @@ jobs:
       - name: Send Discord message
         run: |
              cd csx
-             dotnet --roll-forward Major script discord-webhook.csx ${{ secrets.DISCORD_WEBHOOK }} ${{ github.sha }}
+             dotnet script discord-webhook.csx --roll-forward Major ${{ secrets.DISCORD_WEBHOOK }} ${{ github.sha }}
