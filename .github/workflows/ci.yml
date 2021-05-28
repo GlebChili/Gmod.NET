@@ -427,6 +427,8 @@ jobs:
              dotnet tool restore
 
       - name: Send Discord message
+        env:
+          DOTNET_ROLL_FORWARD: Major
         run: |
              cd csx
-             dotnet script discord-webhook.csx --roll-forward Major ${{ secrets.DISCORD_WEBHOOK }} ${{ github.sha }}
+             dotnet script discord-webhook.csx ${{ secrets.DISCORD_WEBHOOK }} ${{ github.sha }}
