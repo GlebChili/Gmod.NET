@@ -29,13 +29,15 @@
 		<PackageReference Include="GmodNET.VersionTool.MSBuild" Version="2.0.0">
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
     <InternalsVisibleTo Include="GmodNET" />
 	</ItemGroup>
 
   <ItemGroup>
     <VersionFile Include="../../version.json" />
     <Content Include="../../MetaInfo/Logo/gmodnetlogo.png" PackagePath="/" />
+    <Content Include="GmodNET.API.targets" PackagePath="/build" />
+    <Content Include="GmodNET.API.targets" PackagePath="/buildMultiTargeting" />
   </ItemGroup>
 
 </Project>
